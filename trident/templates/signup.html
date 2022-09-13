@@ -13,7 +13,7 @@ Signup
               <div class="text-center">
                 <span class="text-xl text-gray-700">Registration Form</span>
               </div>
-              <form class="" action="save" method="POST">
+              <form class="" action="{% url 'save' %}" method="POST">
                  {% csrf_token %}
                <div class="mt-3 relative">
                 <span class="absolute p-1 bottom-8 ml-2 bg-white text-gray-400 "> Name</span>

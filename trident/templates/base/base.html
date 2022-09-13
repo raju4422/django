@@ -225,33 +225,41 @@
         </div>
       </nav>
       <div class="container mt-3">
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert" id="message">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endfor %}
+      {% endif %}
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-10">
             {% block content %}
             <h1>Hello Guys..</h1>
             {% endblock %}
           </div>
-          <div class="col-md-3" style="border-left:1px solid black">
+          <div class="col-md-2" style="border-left:1px solid black">
             {% block side %}
-            <div class="card" style="width: 18rem">
-              <div class="card-body">
+            <div class="card" style="width: 13rem">
+              <div class="card-body" >
                 <h5 class="card-title">Card title</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
                 </p>
                 {% comment %} <a href="{% url 'add' %}" class="card-link">Add Student</a> {% endcomment %}
                 <a href="#" class="card-link">Another link</a>
               </div>
             </div>
-            <div class="card mt-2" style="width: 18rem">
+            <div class="card mt-2" style="width: 13rem">
               <div class="card-body ">
                 <h5 class="card-title">Card title</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
                 </p>
                 <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a>
