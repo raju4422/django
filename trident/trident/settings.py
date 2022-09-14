@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users'
 ]
-AUTH_USER_MODEL = 'users.Users'
+# AUTH_USER_MODEL = 'users.Users'
 
 
 MIDDLEWARE = [
@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'trident.contextProcessors.common'
             ],
         },
     },
